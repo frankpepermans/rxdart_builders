@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:rxdart/rxdart.dart';
 
-class MergeBuilder<T> extends StreamBuilder<T> {
-  MergeBuilder(
+class ConcatEagerBuilder<T> extends StreamBuilder<T> {
+  ConcatEagerBuilder(
       {Key key,
       T initialData,
       @required List<Stream<T>> streams,
@@ -10,6 +10,6 @@ class MergeBuilder<T> extends StreamBuilder<T> {
       : super(
             key: key,
             initialData: initialData,
-            stream: Rx.merge(streams),
+            stream: Rx.concatEager(streams),
             builder: builder);
 }

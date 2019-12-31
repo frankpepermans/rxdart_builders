@@ -5,7 +5,7 @@ class RaceBuilder<T> extends StreamBuilder<T> {
   RaceBuilder(
       {Key key,
       T initialData,
-      @required Iterable<Stream<T>> streams,
+      @required List<Stream<T>> streams,
       @required AsyncWidgetBuilder<T> builder})
       : super(
             key: key,
