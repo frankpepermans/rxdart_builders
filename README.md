@@ -66,3 +66,18 @@ Widget build(BuildContext context) => RetryBuilder(
     retryErrorBuilder: (context, AsyncSnapshot<User> snapshot) => Text('Oops!'),
   );
 ```
+
+#### Complete list of builders
+
+- CombineLatestNBuilder, where N is the amount of streams you combine
+- ConcatBuilder
+- ConcatEagerBuilder
+- DeferBuilder
+- ForkJoinBuilder
+- MergeBuilder
+- RaceBuilder
+- RepeatBuilder
+- RetryBuilder
+- RetryWhenBuilder
+- SwitchLatestBuilder
+- ZipNBuilder, where N is the amount of streams you combine
