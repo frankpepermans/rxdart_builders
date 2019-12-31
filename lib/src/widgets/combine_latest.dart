@@ -96,30 +96,248 @@ class CombineLatest4Builder<A, B, C, D>
                             snapshot.connectionState, snapshot.data?.item4)));
 }
 
-/// Example
-class TestWidget extends StatefulWidget {
-  @override
-  _TestWidgetState createState() => _TestWidgetState();
+class CombineLatest5Builder<A, B, C, D, E>
+    extends StreamBuilder<Tuple5<A, B, C, D, E>> {
+  CombineLatest5Builder(
+      {Key key,
+      A initialDataA,
+      B initialDataB,
+      C initialDataC,
+      D initialDataD,
+      E initialDataE,
+      @required Stream<A> streamA,
+      @required Stream<B> streamB,
+      @required Stream<C> streamC,
+      @required Stream<D> streamD,
+      @required Stream<E> streamE,
+      @required AsyncWidget5Builder<A, B, C, D, E> builder})
+      : super(
+            key: key,
+            initialData: (initialDataA != null ||
+                    initialDataB != null ||
+                    initialDataC != null ||
+                    initialDataD != null ||
+                    initialDataE != null)
+                ? Tuple5(initialDataA, initialDataB, initialDataC, initialDataD,
+                    initialDataE)
+                : null,
+            stream: Rx.combineLatest5(streamA, streamB, streamC, streamD,
+                streamE, (A a, B b, C c, D d, E e) => Tuple5(a, b, c, d, e)),
+            builder: (BuildContext context, AsyncSnapshot<Tuple5<A, B, C, D, E>> snapshot) => builder(
+                context,
+                AsyncSnapshot.withData(
+                    snapshot.connectionState, snapshot.data?.item1),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item2),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item3),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item4),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item5)));
 }
 
-class _TestWidgetState extends State<TestWidget> {
-  Stream<int> streamA, streamB;
+class CombineLatest6Builder<A, B, C, D, E, F>
+    extends StreamBuilder<Tuple6<A, B, C, D, E, F>> {
+  CombineLatest6Builder(
+      {Key key,
+      A initialDataA,
+      B initialDataB,
+      C initialDataC,
+      D initialDataD,
+      E initialDataE,
+      F initialDataF,
+      @required Stream<A> streamA,
+      @required Stream<B> streamB,
+      @required Stream<C> streamC,
+      @required Stream<D> streamD,
+      @required Stream<E> streamE,
+      @required Stream<F> streamF,
+      @required AsyncWidget6Builder<A, B, C, D, E, F> builder})
+      : super(
+            key: key,
+            initialData: (initialDataA != null ||
+                    initialDataB != null ||
+                    initialDataC != null ||
+                    initialDataD != null ||
+                    initialDataE != null ||
+                    initialDataF != null)
+                ? Tuple6(
+                    initialDataA, initialDataB, initialDataC, initialDataD, initialDataE, initialDataF)
+                : null,
+            stream: Rx.combineLatest6(
+                streamA,
+                streamB,
+                streamC,
+                streamD,
+                streamE,
+                streamF,
+                (A a, B b, C c, D d, E e, F f) => Tuple6(a, b, c, d, e, f)),
+            builder: (BuildContext context, AsyncSnapshot<Tuple6<A, B, C, D, E, F>> snapshot) => builder(
+                context,
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item1),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item2),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item3),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item4),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item5),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item6)));
+}
 
-  @override
-  void initState() {
-    streamA = Stream.periodic(const Duration(seconds: 2), (i) => i)
-        .asBroadcastStream();
-    streamB = Stream.periodic(const Duration(seconds: 1), (i) => i)
-        .asBroadcastStream();
+class CombineLatest7Builder<A, B, C, D, E, F, G>
+    extends StreamBuilder<Tuple7<A, B, C, D, E, F, G>> {
+  CombineLatest7Builder(
+      {Key key,
+      A initialDataA,
+      B initialDataB,
+      C initialDataC,
+      D initialDataD,
+      E initialDataE,
+      F initialDataF,
+      G initialDataG,
+      @required Stream<A> streamA,
+      @required Stream<B> streamB,
+      @required Stream<C> streamC,
+      @required Stream<D> streamD,
+      @required Stream<E> streamE,
+      @required Stream<F> streamF,
+      @required Stream<G> streamG,
+      @required AsyncWidget7Builder<A, B, C, D, E, F, G> builder})
+      : super(
+            key: key,
+            initialData: (initialDataA != null ||
+                    initialDataB != null ||
+                    initialDataC != null ||
+                    initialDataD != null ||
+                    initialDataE != null ||
+                    initialDataF != null ||
+                    initialDataG != null)
+                ? Tuple7(
+                    initialDataA, initialDataB, initialDataC, initialDataD, initialDataE, initialDataF, initialDataG)
+                : null,
+            stream: Rx.combineLatest7(
+                streamA,
+                streamB,
+                streamC,
+                streamD,
+                streamE,
+                streamF,
+                streamG,
+                (A a, B b, C c, D d, E e, F f, G g) =>
+                    Tuple7(a, b, c, d, e, f, g)),
+            builder: (BuildContext context, AsyncSnapshot<Tuple7<A, B, C, D, E, F, G>> snapshot) => builder(
+                context,
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item1),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item2),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item3),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item4),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item5),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item6),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item7)));
+}
 
-    super.initState();
-  }
+class CombineLatest8Builder<A, B, C, D, E, F, G, H>
+    extends StreamBuilder<Tuple8<A, B, C, D, E, F, G, H>> {
+  CombineLatest8Builder(
+      {Key key,
+      A initialDataA,
+      B initialDataB,
+      C initialDataC,
+      D initialDataD,
+      E initialDataE,
+      F initialDataF,
+      G initialDataG,
+      H initialDataH,
+      @required Stream<A> streamA,
+      @required Stream<B> streamB,
+      @required Stream<C> streamC,
+      @required Stream<D> streamD,
+      @required Stream<E> streamE,
+      @required Stream<F> streamF,
+      @required Stream<G> streamG,
+      @required Stream<H> streamH,
+      @required AsyncWidget8Builder<A, B, C, D, E, F, G, H> builder})
+      : super(
+            key: key,
+            initialData: (initialDataA != null || initialDataB != null || initialDataC != null || initialDataD != null || initialDataE != null || initialDataF != null || initialDataG != null || initialDataH != null)
+                ? Tuple8(
+                    initialDataA, initialDataB, initialDataC, initialDataD, initialDataE, initialDataF, initialDataG, initialDataH)
+                : null,
+            stream: Rx.combineLatest8(
+                streamA,
+                streamB,
+                streamC,
+                streamD,
+                streamE,
+                streamF,
+                streamG,
+                streamH,
+                (A a, B b, C c, D d, E e, F f, G g, H h) =>
+                    Tuple8(a, b, c, d, e, f, g, h)),
+            builder: (BuildContext context, AsyncSnapshot<Tuple8<A, B, C, D, E, F, G, H>> snapshot) => builder(
+                context,
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item1),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item2),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item3),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item4),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item5),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item6),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item7),
+                AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item8)));
+}
 
-  @override
-  Widget build(BuildContext context) => CombineLatest2Builder(
-      streamA: streamA,
-      streamB: streamB,
-      initialDataA: -1,
-      builder: (context, AsyncSnapshot<int> a, AsyncSnapshot<int> b) =>
-          Text('[${a.data}, ${b.data}]'));
+class CombineLatest9Builder<A, B, C, D, E, F, G, H, I>
+    extends StreamBuilder<Tuple9<A, B, C, D, E, F, G, H, I>> {
+  CombineLatest9Builder(
+      {Key key,
+      A initialDataA,
+      B initialDataB,
+      C initialDataC,
+      D initialDataD,
+      E initialDataE,
+      F initialDataF,
+      G initialDataG,
+      H initialDataH,
+      I initialDataI,
+      @required Stream<A> streamA,
+      @required Stream<B> streamB,
+      @required Stream<C> streamC,
+      @required Stream<D> streamD,
+      @required Stream<E> streamE,
+      @required Stream<F> streamF,
+      @required Stream<G> streamG,
+      @required Stream<H> streamH,
+      @required Stream<I> streamI,
+      @required AsyncWidget9Builder<A, B, C, D, E, F, G, H, I> builder})
+      : super(
+            key: key,
+            initialData: (initialDataA != null ||
+                    initialDataB != null ||
+                    initialDataC != null ||
+                    initialDataD != null ||
+                    initialDataE != null ||
+                    initialDataF != null ||
+                    initialDataG != null ||
+                    initialDataH != null ||
+                    initialDataI != null)
+                ? Tuple9(
+                    initialDataA,
+                    initialDataB,
+                    initialDataC,
+                    initialDataD,
+                    initialDataE,
+                    initialDataF,
+                    initialDataG,
+                    initialDataH,
+                    initialDataI)
+                : null,
+            stream: Rx.combineLatest9(
+                streamA,
+                streamB,
+                streamC,
+                streamD,
+                streamE,
+                streamF,
+                streamG,
+                streamH,
+                streamI,
+                (A a, B b, C c, D d, E e, F f, G g, H h, I i) =>
+                    Tuple9(a, b, c, d, e, f, g, h, i)),
+            builder: (BuildContext context, AsyncSnapshot<Tuple9<A, B, C, D, E, F, G, H, I>> snapshot) =>
+                builder(context, AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item1), AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item2), AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item3), AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item4), AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item5), AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item6), AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item7), AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item8), AsyncSnapshot.withData(snapshot.connectionState, snapshot.data?.item9)));
 }
