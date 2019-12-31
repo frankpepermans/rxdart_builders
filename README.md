@@ -8,7 +8,8 @@ StreamBuilder and a Stream constructor.
 
 This package is totally optional, you can just use direct rxdart constructors if you prefer to.
 
-The difference in approach is best described via a few examples:
+Using rxdart_builders instead of StreamBuilder makes your UI more expressive,
+the difference in approach is best described via a few examples:
 
 ### Example with combineLatest, pure rxdart
 ```dart
@@ -24,6 +25,10 @@ Widget build(BuildContext context) => StreamBuilder(
 ```
 
 ### Example with combineLatest, rxdart_builders
+
+Here there is no need to write a handler which combines the events into one single event,
+the builder method will list as AsyncSnapshot for each individual event instead.
+
 ```dart
 Widget build(BuildContext context) => CombineLatest2Builder(
     streamA: Stream.periodic(const Duration(seconds: 1), (i) => i),
@@ -49,6 +54,10 @@ Widget build(BuildContext context) => StreamBuilder(
 ```
 
 ### Example with retry, rxdart_builders
+
+For convenience, you can optionally use a retryErrorBuilder, should the retry have failed
+for count amount of times.
+
 ```dart
 Widget build(BuildContext context) => RetryBuilder(
     count: 3,
