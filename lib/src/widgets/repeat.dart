@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/widgets.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:rxdart_builders/src/widgets/shared/async.dart';
 
