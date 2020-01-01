@@ -36,7 +36,7 @@ import 'package:rxdart_builders/src/widgets/shared/async.dart';
 ///  * [StreamBuilder].
 ///  * [Rx.retry].
 class RetryBuilder<T> extends StreamBuilder<T> {
-  @protected
+  /// The build strategy used when the retry fails with a [RetryError].
   final AsyncWidgetBuilder<T> retryErrorBuilder;
 
   /// Creates a special [StreamBuilder] using [Rx.retry] to build a

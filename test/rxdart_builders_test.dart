@@ -9,7 +9,7 @@ void main() {
     streamFactory: () => Stream<void>.error(Error()),
     builder: (context, AsyncSnapshot<void> snapshot) => Text('OK'),
     retryErrorBuilder: (context, AsyncSnapshot<void> snapshot) => Text('Oops!'),
-    retryWhenFactory: (e, s) {
+    retryWhenFactory: (Object e, s) {
       // we'll just keep on throwing
       return Stream<void>.error(Error());
     },

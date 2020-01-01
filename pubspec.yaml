@@ -1,11 +1,11 @@
 name: rxdart_builders
 description: Rxdart builders
-version: 0.0.1
-author:
-homepage:
+version: 1.0.0
+author: Frank Pepermans <frank@igindo.com>
+homepage: https://github.com/frankpepermans/rxdart_builders
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.6.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -15,3 +15,4 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  pedantic: ^1.8.0
