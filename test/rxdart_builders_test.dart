@@ -32,14 +32,22 @@ void main() {
         return Text('OK');
       });
 
-  CombineLatest2Builder(
-    streamA: Stream.periodic(const Duration(seconds: 1), (i) => i),
-    streamB: Stream.periodic(const Duration(seconds: 2), (i) => i),
+  ForkJoin2Builder(
+    streamA: Stream.periodic(const Duration(seconds: 1), (i) => i).take(2),
+    streamB: Stream.periodic(const Duration(seconds: 2), (i) => i).take(2),
     initialDataA: -1,
     initialDataB: -1,
     builder:
         (context, AsyncSnapshot<int> snapshotA, AsyncSnapshot<int> snapshotB) =>
-            Text('${snapshotA.data}, ${snapshotB.data}'),
+            Text('${snapshotA.data}, ${snapshotB.data}'), // 1, 1
+  );
+
+  DeferBuilder(
+    streamFactory: () async* {
+      yield 'I was built at ${DateTime.now()}'!;
+    },
+    builder: (context, AsyncSnapshot<String> snapshot) => Text(snapshot.data),
+    initialData: null,
   );
 
   StreamBuilder(

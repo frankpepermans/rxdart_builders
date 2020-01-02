@@ -97,7 +97,7 @@ class CombineLatest2Builder<A, B> extends StreamBuilder<Tuple2<A, B>> {
 ///
 /// {@tool sample}
 ///
-/// Creates a [CombineLatest3Builder] which combines 2 periodic [Stream]s.
+/// Creates a [CombineLatest3Builder] which combines 3 periodic [Stream]s.
 /// The resulting Widget is built upon any incoming event from the provided
 /// [Stream]s, in the builder, the latest values at this point in time
 ///  from those [Stream]s are passed.
@@ -182,7 +182,7 @@ class CombineLatest3Builder<A, B, C> extends StreamBuilder<Tuple3<A, B, C>> {
 ///
 /// {@tool sample}
 ///
-/// Creates a [CombineLatest4Builder] which combines 2 periodic [Stream]s.
+/// Creates a [CombineLatest4Builder] which combines 4 periodic [Stream]s.
 /// The resulting Widget is built upon any incoming event from the provided
 /// [Stream]s, in the builder, the latest values at this point in time
 ///  from those [Stream]s are passed.
@@ -276,7 +276,7 @@ class CombineLatest4Builder<A, B, C, D>
 ///
 /// {@tool sample}
 ///
-/// Creates a [CombineLatest5Builder] which combines 2 periodic [Stream]s.
+/// Creates a [CombineLatest5Builder] which combines 5 periodic [Stream]s.
 /// The resulting Widget is built upon any incoming event from the provided
 /// [Stream]s, in the builder, the latest values at this point in time
 ///  from those [Stream]s are passed.
@@ -372,7 +372,7 @@ class CombineLatest5Builder<A, B, C, D, E>
 ///
 /// {@tool sample}
 ///
-/// Creates a [CombineLatest6Builder] which combines 2 periodic [Stream]s.
+/// Creates a [CombineLatest6Builder] which combines 6 periodic [Stream]s.
 /// The resulting Widget is built upon any incoming event from the provided
 /// [Stream]s, in the builder, the latest values at this point in time
 ///  from those [Stream]s are passed.
@@ -480,7 +480,7 @@ class CombineLatest6Builder<A, B, C, D, E, F>
 ///
 /// {@tool sample}
 ///
-/// Creates a [CombineLatest7Builder] which combines 2 periodic [Stream]s.
+/// Creates a [CombineLatest7Builder] which combines 7 periodic [Stream]s.
 /// The resulting Widget is built upon any incoming event from the provided
 /// [Stream]s, in the builder, the latest values at this point in time
 ///  from those [Stream]s are passed.
@@ -596,7 +596,7 @@ class CombineLatest7Builder<A, B, C, D, E, F, G>
 ///
 /// {@tool sample}
 ///
-/// Creates a [CombineLatest8Builder] which combines 2 periodic [Stream]s.
+/// Creates a [CombineLatest8Builder] which combines 8 periodic [Stream]s.
 /// The resulting Widget is built upon any incoming event from the provided
 /// [Stream]s, in the builder, the latest values at this point in time
 ///  from those [Stream]s are passed.
@@ -713,7 +713,7 @@ class CombineLatest8Builder<A, B, C, D, E, F, G, H>
 ///
 /// {@tool sample}
 ///
-/// Creates a [CombineLatest9Builder] which combines 2 periodic [Stream]s.
+/// Creates a [CombineLatest9Builder] which combines 9 periodic [Stream]s.
 /// The resulting Widget is built upon any incoming event from the provided
 /// [Stream]s, in the builder, the latest values at this point in time
 ///  from those [Stream]s are passed.
