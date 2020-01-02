@@ -1,0 +1,20 @@
+name: rxdart_builders_example
+description: Rxdart builders example
+version: 1.0.0
+author: Frank Pepermans <frank@igindo.com>
+homepage: https://github.com/frankpepermans/rxdart_builders
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  rxdart: ^0.23.1
+  rxdart_builders:
+    path: ../
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  pedantic: ^1.8.0
