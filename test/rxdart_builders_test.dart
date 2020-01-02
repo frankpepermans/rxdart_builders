@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:rxdart/rxdart.dart';
 
 import 'package:rxdart_builders/rxdart_builders.dart';
+import 'package:rxdart_builders/src/widgets/repeat.dart';
 
 void main() {
   RetryWhenBuilder(
@@ -42,12 +43,13 @@ void main() {
             Text('${snapshotA.data}, ${snapshotB.data}'), // 1, 1
   );
 
-  DeferBuilder(
-    streamFactory: () async* {
-      yield 'I was built at ${DateTime.now()}'!;
-    },
+  SwitchLatestBuilder(
+    streams: Stream.fromIterable([
+      Rx.timer('A', Duration(seconds: 2)),
+      Rx.timer('B', Duration(seconds: 1)),
+      Stream.value('C'),
+    ]),
     builder: (context, AsyncSnapshot<String> snapshot) => Text(snapshot.data),
-    initialData: null,
   );
 
   StreamBuilder(
